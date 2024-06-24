@@ -16,8 +16,10 @@ namespace hardware {
 namespace light {
 
 static const std::string kBacklightDevices[] = {
+#ifndef USE_LCD_BACKLIGHT_INTERFACE_ONLY
         "backlight",
         "panel0-backlight",
+#endif
 };
 
 static std::vector<BacklightDevice> getBacklightDevices() {
